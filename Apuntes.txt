@@ -1,0 +1,20 @@
+Programación III
+
+
+Clase 3:
+
+Variables súperglobales
+	Se escriben comenzando con "$_".
+
+	var_dump($_REQUEST);
+
+
+Cuando voy a pasar datos se redirige al mismo archivo o a otro.
+
+En el tag "form" se usa el atributo "method" para indicar la forma en que submitimos los datos ("get" o "post").
+	> When to Use POST?
+	> Always use POST if the form data contains sensitive or personal information.
+	> The POST method does not display the submitted form data in the page address field.
+	> POST has no size limitations, and can be used to send large amounts of data.
+
+Form: Atributo "action": 
