@@ -14,40 +14,40 @@
   </head>
 
   <body>
+  <?php
+    $sup = "";
+    if (isset($_POST['lado1']) && isset($_POST['lado2'])) {
+        // Calcula la superficie
+        $sup = $_POST['lado1'] * $_POST['lado2'];
+        //echo $sup;
+      }
+  ?>
+      
+  <!-- Mixins-->
+  <!-- Pen Title-->
+  <div class="pen-title">
+    <h1>Aplicación 25</h1><span>Superficie de un rectángulo</span>
+  </div>
+  <div class="container">
+    <div class="card"></div>
+    <div class="card">
+      <h1 class="title">Resultado</h1>
+      <form method="post">
+        <div class="input-container">
+          <input type="text" id="superficie" name="superficie" disabled="disabled"
+          value="<?php echo $sup; ?>"/>
+          <div class="bar"></div>
+        </div>
+        <div class="button-container">
+          <button type="submit" formaction="index.php"><span>Volver</span></button>
+        </div>
+      </form>
+    </div>
 
-    
-<!-- Mixins-->
-<!-- Pen Title-->
-<div class="pen-title">
-  <h1>Aplicación 25</h1><span>Superficie de un rectángulo</span>
-</div>
-<div class="container">
-  <div class="card"></div>
-  <div class="card">
-    <h1 class="title">Resultado</h1>
-    <form method="post">
-      <div class="input-container">
-        <input type="text" id="superficie" name="superficie" disabled="disabled"
-        value="<?php
-          if (isset($_POST['lado1']) && isset($_POST['lado2'])) {
-            // Calcula la superficie
-            $sup = $_POST['lado1'] * $_POST['lado2'];
-            echo $sup;
-          }
-          ?>"/>
-        <div class="bar"></div>
-      </div>
-      <div class="button-container">
-        <button type="submit" formaction="index.php"><span>Volver</span></button>
-      </div>
-    </form>
   </div>
 
-</div>
-
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src="js/index.js"></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="js/index.js"></script>
     
   </body>
 </html>
-
