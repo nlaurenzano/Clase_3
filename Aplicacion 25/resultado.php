@@ -24,20 +24,21 @@
 <div class="container">
   <div class="card"></div>
   <div class="card">
-    <h1 class="title">Ingreso de datos</h1>
-    <form method="post" action="resultado.php">
+    <h1 class="title">Resultado</h1>
+    <form method="post">
       <div class="input-container">
-        <input type="text" id="lado1" name="lado1" required="required"/>
-        <label for="lado1">Lado 1</label>
-        <div class="bar"></div>
-      </div>
-      <div class="input-container">
-        <input type="text" id="lado2" name="lado2" required="required"/>
-        <label for="lado2">Lado 2</label>
+        <input type="text" id="superficie" name="superficie" disabled="disabled"
+        value="<?php
+          if (isset($_POST['lado1']) && isset($_POST['lado2'])) {
+            // Calcula la superficie
+            $sup = $_POST['lado1'] * $_POST['lado2'];
+            echo $sup;
+          }
+          ?>"/>
         <div class="bar"></div>
       </div>
       <div class="button-container">
-        <button type="submit"><span>Calcular</span></button>
+        <button type="submit" formaction="index.php"><span>Volver</span></button>
       </div>
     </form>
   </div>
