@@ -1,6 +1,11 @@
 <html>
 <head>
 	<title>Clase 3</title>
+
+	<!--Estilos-->
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<link rel="stylesheet" type="text/css" href="animacion.css">
+	<!--final de Estilos-->
 </head>
 <body>
 
